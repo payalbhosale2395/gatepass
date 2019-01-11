@@ -1,0 +1,76 @@
+
+<html lang="en">
+    <h2>Contact Person Details..</h2>
+    <body>
+      <div class="form">
+          <div class="row main">
+              <div class="main-login main-center">
+      <form #employeeForm="ngForm">
+    
+      
+        <div class="form-group">
+          <label class="cols-sm-2 control-label">Enter Name</label>
+          <div class="cols-sm-10"> 
+             <div class="input-group">
+            <span class="input-group-addon">
+              <i class="fa fa-user fa" aria-hidden="true">
+            </i></span>
+          <input class="form-control" name="ename" #ename="ngModel"
+          [(ngModel)]="contactPersonService.Cname" placeholder="Enter name" 
+          required pattern="[A-Za-z]*" >
+        </div>
+        </div>
+        </div>
+       
+        <div class="form-group">
+            <label>Email Id</label>
+          <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true">
+                    </i></span>
+            <input class="form-control" name="mobno" #mobno="ngModel"
+            [(ngModel)]="contactPersonService.Cmail" placeholder="mail id" required
+            >
+          </div>
+          </div>
+
+          <div class="form-group">
+            <label class="cols-sm-2 control-label">Reason</label>
+            <div class="cols-sm-10"> 
+               <div class="input-group">
+            <textarea class="form-control" rows="3" cols="60" name="reason" #reason="ngModel"
+            [(ngModel)]="contactPersonService.Creason"placeholder="reason" 
+            required pattern="[A-Za-z]*" ></textarea>
+          </div>
+          </div>
+          </div>
+           <!--
+          <div class="form-group">
+            <label>status</label>
+          <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+            <input class="form-control" name="status" #status="ngModel"
+            [(ngModel)]="contactPersonService.Cstatus" placeholder="status" required>
+          </div>
+          </div>
+          
+        -->
+        <div class="form-group">
+          <button class="btn btn-default" type="submit" (click)='contactInfo()' [disabled]="!employeeForm.valid">
+            <i class="fa fa-floppy-o"></i>
+            Submit</button>&nbsp;
+          <button class="btn btn-default" type="reset" (click)="resetForm(employeeForm)">
+            <i class="fa fa-repeat"></i>
+            Reset</button>
+    
+        </div>
+      
+        
+
+
+    
+      </form>
+    </div>
+    </div>
+    </div>
+    </body>
+    </html>
